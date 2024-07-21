@@ -12,7 +12,7 @@ export const useUserStore = create((set) => ({
             
             const authUser = auth.currentUser;
             if(!authUser) return  set({ currentUser:null, isLoading: false  });
-            console.log(authUser);
+            
             return set({ currentUser: authUser ? authUser : false, isLoading: false });
             
         } catch (error) {
